@@ -8,7 +8,7 @@ const port = 3000;
 
 dotenv.config();
 
-const db = new pg.Pool({
+const db = new pg.Client({
   connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false,
